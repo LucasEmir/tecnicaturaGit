@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\OneDrive\\Escritorio\\HTML"
+		},
+		{
+			"path": "..\\..\\ProyectoFinalPetShop\\PetShop\\src\\main\\resources\\templates"
+		},
+		{
+			"path": "..\\..\\ProyectoFinalPetShop\\PetShop\\src\\main\\resources"
+		},
+		{
+			"path": "..\\..\\OneDrive\\Escritorio\\HTML\\carrito\\Carrito-De-Compras-master"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "templates"
+	}
+}
