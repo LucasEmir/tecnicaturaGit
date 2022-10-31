@@ -1,6 +1,7 @@
 #Ejercicio 3: Insertar elementos ordenados
 #Pedir números y meterlos en una lista, cuando el usuario
-
+#Introduzca un número 0, nuestro programa dejaría de insertar.
+#Por último mostrar los números ordenados de menor a mayor.
 
 lista = []
 salir = False

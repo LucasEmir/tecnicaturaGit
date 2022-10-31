@@ -13,17 +13,17 @@ mi_funcion() # Se puede llamar a la funcion N cantidad de veces
 def show(name, lastName):
     print(name+' '+lastName)
 person = ["Ariel", "Betancud"]
-show(person[0], person[1]) #Pasamos uno por uno los datos de las listas
+show(person[0], person[1]) #Pasamos uno por uno los datos de las listas a la función
 show(*person) #Esto es lo mismo que lo anterior pero pasamos todo junto
-person2 = ('Osvaldo', 'Giordanini') #Desempaquetamos a traves de una tupla
+person2 = ('Osvaldo', 'Giordanini') # Desempaquetamos a través de una tupla
 show(*person2)
 person3 = {"lasName": "Lucero", "name": "Natalia"}
-show(*person3)
+show(**person3)
 
 numbers = [1, 2, 3, 4, 5]
 for n in numbers:
     print(n)
-else:
+else:  #La única forma para que no se ejecute el else es con un condicional y un break(ej video)
     print('Esto se termino.')
 
 # List comprehension, lista de conprencion
@@ -68,13 +68,45 @@ def listarNombres(*nombres):#Cuando no sabemos cuantos argumentos recibira (*arg
 listarNombres('Pepe', 'Juan', 'Jose', 'Ignacio') #Llamado a la función y paso por parámetro
 listarNombres('lele', 'lala', 'David', 'Lolo')
 
+#7.2 Argumentos variables para un diccionario
+def listarTerminos(**terminos): #Lo más utilizado es **kwargs par recebir los argumentos
+    for llave, valor in terminos.items(): # Kwargs significa: key word argument
+        print(f'{llave} : {valor}')
+
+listarTerminos() # No recibe nada, nada se va a mostrar
+listarTerminos(IDE='Integrated Develoment Eviroment', PK='Primary Key')
+listarTerminos(Nombre='Leonel Messi')
+
+#7.3 Lista de elementos con funciones convertir
+def desplegarNombres(nombres):
+    for nombre in nombres:
+        print(nombre)
+nombres2 = ['Tito', 'Pedro','Carlos']
+desplegarNombres(nombres2)
+desplegarNombres('Carla')
+#desplegarNombres(10, 11) Esto no es un objeto iterable
+desplegarNombres((10, 11)) #Esto es una tupla, si es iterable
+desplegarNombres([22, 55]) #Lo convertimos en una lista
+
+#7.4 Funciones recursivas 
+
+def factorial(numero):
+    if numero == 1: # Caso base
+        return 1
+    else:
+        return numero * factorial(numero-1) #Caso recursivo
+
+resultado = factorial(5) # Lo hacemos en código duro
+print(f'El factorial del número 5 es: {resultado}')
 
 
 
+def factorial1(numero1):
+    if numero1 == 1: # Caso base
+        return 1
+    else:
+        return numero1 * factorial(numero1-1) #Caso recursivo
 
-
-
-
-
-
+resultado1 = factorial1(numero1= int(input('Ingrese un número: ')))
+print(f'El factorial del número ingresado es: {resultado}')
 
