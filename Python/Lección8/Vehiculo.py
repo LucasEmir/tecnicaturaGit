@@ -51,3 +51,5 @@ print(auto)
 # Tercer objeto, pero de la clase Bicicleta
 bici = Bicicleta('Azul', 2 , 'Montaña')
 print(bici)
+
+#Solo para analixar los comentario
