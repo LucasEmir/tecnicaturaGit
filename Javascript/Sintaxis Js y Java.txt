@@ -57,5 +57,9 @@ Operadores Relacionales
 <=
 >=
 
+Operadores Lógicos
+And -> && Doble aspersan
+Or  -> 
+
 
 
